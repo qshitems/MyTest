@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FC1EA7D5-A761-4E27-9482-159FA1B5E839}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyTest.DAL</RootNamespace>
+    <AssemblyName>MyTest.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sys\Sys_AreaDAL.cs" />
+    <Compile Include="Sys\Sys_DbBackupDAL.cs" />
+    <Compile Include="Sys\Sys_FilterIPDAL.cs" />
+    <Compile Include="Sys\Sys_ItemsDAL.cs" />
+    <Compile Include="Sys\Sys_ItemsDetailDAL.cs" />
+    <Compile Include="Sys\Sys_LogDAL.cs" />
+    <Compile Include="Sys\Sys_ModuleButtonDAL.cs" />
+    <Compile Include="Sys\Sys_ModuleDAL.cs" />
+    <Compile Include="Sys\Sys_ModuleFormDAL.cs" />
+    <Compile Include="Sys\Sys_ModuleFormInstanceDAL.cs" />
+    <Compile Include="Sys\Sys_OrganizeDAL.cs" />
+    <Compile Include="Sys\Sys_RoleAuthorizeDAL.cs" />
+    <Compile Include="Sys\Sys_RoleDAL.cs" />
+    <Compile Include="Sys\Sys_UserDAL.cs" />
+    <Compile Include="Sys\Sys_UserLogOnDAL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyTest.Code\MyTest.Code.csproj">
+      <Project>{863ebe61-9d6d-4e0d-a5be-b3d0554685fc}</Project>
+      <Name>MyTest.Code</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyTest.Model\MyTest.Model.csproj">
+      <Project>{bb500582-ec67-4bf7-9192-657f1c4dfd5f}</Project>
+      <Name>MyTest.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
